@@ -1,0 +1,602 @@
+{
+    "S001202": {
+        "first_name": "Luther",
+        "last_name": "Strange",
+        "party": "R",
+        "state": "AL"
+    },
+    "C001113": {
+        "first_name": "Catherine",
+        "last_name": "Cortez Masto",
+        "party": "D",
+        "state": "NV"
+    },
+    "H001076": {
+        "first_name": "Margaret",
+        "last_name": "Hassan",
+        "party": "D",
+        "state": "NH"
+    },
+    "K000393": {
+        "first_name": "John",
+        "last_name": "Kennedy",
+        "party": "R",
+        "state": "LA"
+    },
+    "H001075": {
+        "first_name": "Kamala",
+        "last_name": "Harris",
+        "party": "D",
+        "state": "CA"
+    },
+    "S001197": {
+        "first_name": "Benjamin",
+        "last_name": "Sasse",
+        "party": "R",
+        "state": "NE"
+    },
+    "R000605": {
+        "first_name": "Mike",
+        "last_name": "Rounds",
+        "party": "R",
+        "state": "SD"
+    },
+    "T000476": {
+        "first_name": "Thom",
+        "last_name": "Tillis",
+        "party": "R",
+        "state": "NC"
+    },
+    "E000295": {
+        "first_name": "Joni",
+        "last_name": "Ernst",
+        "party": "R",
+        "state": "IA"
+    },
+    "P000612": {
+        "first_name": "David",
+        "last_name": "Perdue",
+        "party": "R",
+        "state": "GA"
+    },
+    "S001198": {
+        "first_name": "Dan",
+        "last_name": "Sullivan",
+        "party": "R",
+        "state": "AK"
+    },
+    "B001288": {
+        "first_name": "Cory",
+        "last_name": "Booker",
+        "party": "D",
+        "state": "NJ"
+    },
+    "K000384": {
+        "first_name": "Timothy",
+        "last_name": "Kaine",
+        "party": "D",
+        "state": "VA"
+    },
+    "C001098": {
+        "first_name": "Ted",
+        "last_name": "Cruz",
+        "party": "R",
+        "state": "TX"
+    },
+    "F000463": {
+        "first_name": "Deb",
+        "last_name": "Fischer",
+        "party": "R",
+        "state": "NE"
+    },
+    "H001069": {
+        "first_name": "Heidi",
+        "last_name": "Heitkamp",
+        "party": "D",
+        "state": "ND"
+    },
+    "D000618": {
+        "first_name": "Steve",
+        "last_name": "Daines",
+        "party": "R",
+        "state": "MT"
+    },
+    "K000383": {
+        "first_name": "Angus",
+        "last_name": "King",
+        "party": "I",
+        "state": "ME"
+    },
+    "W000817": {
+        "first_name": "Elizabeth",
+        "last_name": "Warren",
+        "party": "D",
+        "state": "MA"
+    },
+    "D000622": {
+        "first_name": "Tammy",
+        "last_name": "Duckworth",
+        "party": "D",
+        "state": "IL"
+    },
+    "C001095": {
+        "first_name": "Tom",
+        "last_name": "Cotton",
+        "party": "R",
+        "state": "AR"
+    },
+    "S001194": {
+        "first_name": "Brian",
+        "last_name": "Schatz",
+        "party": "D",
+        "state": "HI"
+    },
+    "H001041": {
+        "first_name": "Dean",
+        "last_name": "Heller",
+        "party": "R",
+        "state": "NV"
+    },
+    "Y000064": {
+        "first_name": "Todd",
+        "last_name": "Young",
+        "party": "R",
+        "state": "IN"
+    },
+    "W000779": {
+        "first_name": "Ron",
+        "last_name": "Wyden",
+        "party": "D",
+        "state": "OR"
+    },
+    "V000128": {
+        "first_name": "Chris",
+        "last_name": "Van Hollen",
+        "party": "D",
+        "state": "MD"
+    },
+    "T000461": {
+        "first_name": "Patrick",
+        "last_name": "Toomey",
+        "party": "R",
+        "state": "PA"
+    },
+    "T000250": {
+        "first_name": "John",
+        "last_name": "Thune",
+        "party": "R",
+        "state": "SD"
+    },
+    "S000320": {
+        "first_name": "Richard",
+        "last_name": "Shelby",
+        "party": "R",
+        "state": "AL"
+    },
+    "S001184": {
+        "first_name": "Tim",
+        "last_name": "Scott",
+        "party": "R",
+        "state": "SC"
+    },
+    "S000148": {
+        "first_name": "Charles",
+        "last_name": "Schumer",
+        "party": "D",
+        "state": "NY"
+    },
+    "R000595": {
+        "first_name": "Marco",
+        "last_name": "Rubio",
+        "party": "R",
+        "state": "FL"
+    },
+    "P000449": {
+        "first_name": "Robert",
+        "last_name": "Portman",
+        "party": "R",
+        "state": "OH"
+    },
+    "P000595": {
+        "first_name": "Gary",
+        "last_name": "Peters",
+        "party": "D",
+        "state": "MI"
+    },
+    "P000603": {
+        "first_name": "Rand",
+        "last_name": "Paul",
+        "party": "R",
+        "state": "KY"
+    },
+    "M001111": {
+        "first_name": "Patty",
+        "last_name": "Murray",
+        "party": "D",
+        "state": "WA"
+    },
+    "M001169": {
+        "first_name": "Christopher",
+        "last_name": "Murphy",
+        "party": "D",
+        "state": "CT"
+    },
+    "M001153": {
+        "first_name": "Lisa",
+        "last_name": "Murkowski",
+        "party": "R",
+        "state": "AK"
+    },
+    "M000934": {
+        "first_name": "Jerry",
+        "last_name": "Moran",
+        "party": "R",
+        "state": "KS"
+    },
+    "M000303": {
+        "first_name": "John",
+        "last_name": "McCain",
+        "party": "R",
+        "state": "AZ"
+    },
+    "M000133": {
+        "first_name": "Edward",
+        "last_name": "Markey",
+        "party": "D",
+        "state": "MA"
+    },
+    "L000577": {
+        "first_name": "Mike",
+        "last_name": "Lee",
+        "party": "R",
+        "state": "UT"
+    },
+    "L000174": {
+        "first_name": "Patrick",
+        "last_name": "Leahy",
+        "party": "D",
+        "state": "VT"
+    },
+    "L000575": {
+        "first_name": "James",
+        "last_name": "Lankford",
+        "party": "R",
+        "state": "OK"
+    },
+    "J000293": {
+        "first_name": "Ron",
+        "last_name": "Johnson",
+        "party": "R",
+        "state": "WI"
+    },
+    "I000055": {
+        "first_name": "John",
+        "last_name": "Isakson",
+        "party": "R",
+        "state": "GA"
+    },
+    "H001061": {
+        "first_name": "John",
+        "last_name": "Hoeven",
+        "party": "R",
+        "state": "ND"
+    },
+    "H001042": {
+        "first_name": "Mazie",
+        "last_name": "Hirono",
+        "party": "D",
+        "state": "HI"
+    },
+    "H001046": {
+        "first_name": "Martin",
+        "last_name": "Heinrich",
+        "party": "D",
+        "state": "NM"
+    },
+    "G000386": {
+        "first_name": "Charles",
+        "last_name": "Grassley",
+        "party": "R",
+        "state": "IA"
+    },
+    "G000562" : {
+      "first_name": "Cory",
+      "last_name": "Gardner",
+      "party": "R",
+      "state": "CO"
+    },
+    "F000444" : {
+      "first_name": "Jeff",
+      "last_name": "Flake",
+      "party": "R",
+      "state": "AZ"
+    },
+    "D000607" : {
+      "first_name": "Joe",
+      "last_name": "Donnelly",
+      "party": "D",
+      "state": "IN"
+    },
+    "C000880" : {
+      "first_name": "Michael",
+      "last_name": "Crapo",
+      "party": "R",
+      "state": "ID"
+    },
+    "C001075" : {
+      "first_name": "Bill",
+      "last_name": "Cassidy",
+      "party": "R",
+      "state": "LA"
+    },
+    "C001047" : {
+      "first_name": "Shelley",
+      "last_name": "Capito",
+      "party": "R",
+      "state": "WV"
+    },
+    "B001135" : {
+      "first_name": "Richard",
+      "last_name": "Burr",
+      "party": "R",
+      "state": "NC"
+    },
+    "B001236" : {
+      "first_name": "John",
+      "last_name": "Boozman",
+      "party": "R",
+      "state": "AR"
+    },
+    "B000575" : {
+      "first_name": "Roy",
+      "last_name": "Blunt",
+      "party": "R",
+      "state": "MO"
+    },
+    "B001277" : {
+      "first_name": "Richard",
+      "last_name": "Blumenthal",
+      "party": "D",
+      "state": "CT"
+    },
+    "B001267" : {
+      "first_name": "Michael",
+      "last_name": "Bennet",
+      "party": "D",
+      "state": "CO"
+    },
+    "B001230" : {
+      "first_name": "Tammy",
+      "last_name": "Baldwin",
+      "party": "D",
+      "state": "WI"
+    },
+    "M001183" : {
+      "first_name": "Joe",
+      "last_name": "Manchin",
+      "party": "D",
+      "state": "WV"
+    },
+    "C001088" : {
+      "first_name": "Chris",
+      "last_name": "Coons",
+      "party": "D",
+      "state": "DE"
+    },
+    "F000457" : {
+      "first_name": "Alan",
+      "last_name": "Franken",
+      "party": "D",
+      "state": "MN"
+    },
+    "G000555" : {
+      "first_name": "Kirsten",
+      "last_name": "Gillibrand",
+      "party": "D",
+      "state": "NY"
+    },
+    "W000805" : {
+      "first_name": "Mark",
+      "last_name": "Warner",
+      "party": "D",
+      "state": "VA"
+    },
+    "U000039" : {
+      "first_name": "Tom",
+      "last_name": "Udall",
+      "party": "D",
+      "state": "NM"
+    },
+    "S001181" : {
+      "first_name": "Jeanne",
+      "last_name": "Shaheen",
+      "party": "D",
+      "state": "NH"
+    },
+    "R000307" : {
+      "first_name": "Pat",
+      "last_name": "Roberts",
+      "party": "R",
+      "state": "KS"
+    },
+    "R000584" : {
+      "first_name": "James",
+      "last_name": "Risch",
+      "party": "R",
+      "state": "ID"
+    },
+    "R000122" : {
+      "first_name": "John",
+      "last_name": "Reed",
+      "party": "D",
+      "state": "RI"
+    },
+    "M001176" : {
+      "first_name": "Jeff",
+      "last_name": "Merkley",
+      "party": "D",
+      "state": "OR"
+    },
+    "M000355" : {
+      "first_name": "Mitch",
+      "last_name": "McConnell",
+      "party": "R",
+      "state": "KY"
+    },
+    "I000024" : {
+      "first_name": "James",
+      "last_name": "Inhofe",
+      "party": "R",
+      "state": "OK"
+    },
+    "G000359" : {
+      "first_name": "Lindsey",
+      "last_name": "Graham",
+      "party": "R",
+      "state": "SC"
+    },
+    "E000285" : {
+      "first_name": "Michael",
+      "last_name": "Enzi",
+      "party": "R",
+      "state": "WY"
+    },
+    "D000563" : {
+      "first_name": "Richard",
+      "last_name": "Durbin",
+      "party": "D",
+      "state": "IL"
+    },
+    "C001056" : {
+      "first_name": "John",
+      "last_name": "Cornyn",
+      "party": "R",
+      "state": "TX"
+    },
+    "C001035" : {
+      "first_name": "Susan",
+      "last_name": "Collins",
+      "party": "R",
+      "state": "ME"
+    },
+    "C000567" : {
+      "first_name": "Thad",
+      "last_name": "Cochran",
+      "party": "R",
+      "state": "MS"
+    },
+    "A000360" : {
+      "first_name": "Lamar",
+      "last_name": "Alexander",
+      "party": "R",
+      "state": "TN"
+    },
+    "W000437" : {
+      "first_name": "Roger",
+      "last_name": "Wicker",
+      "party": "R",
+      "state": "MS"
+    },
+    "B001261" : {
+      "first_name": "John",
+      "last_name": "Barrasso",
+      "party": "R",
+      "state": "WY"
+    },
+    "W000802" : {
+      "first_name": "Sheldon",
+      "last_name": "Whitehouse",
+      "party": "D",
+      "state": "RI"
+    },
+    "T000464" : {
+      "first_name": "Jon",
+      "last_name": "Tester",
+      "party": "D",
+      "state": "MT"
+    },
+    "S000770" : {
+      "first_name": "Debbie",
+      "last_name": "Stabenow",
+      "party": "D",
+      "state": "MI"
+    },
+    "S000033" : {
+      "first_name": "Bernard",
+      "last_name": "Sanders",
+      "party": "I",
+      "state": "VT"
+    },
+    "N000032" : {
+      "first_name": "Bill",
+      "last_name": "Nelson",
+      "party": "D",
+      "state": "FL"
+    },
+    "M000639" : {
+      "first_name": "Robert",
+      "last_name": "Menéndez",
+      "party": "D",
+      "state": "NJ"
+    },
+    "M001170" : {
+      "first_name": "Claire",
+      "last_name": "McCaskill",
+      "party": "D",
+      "state": "MO"
+    },
+    "K000367" : {
+      "first_name": "Amy",
+      "last_name": "Klobuchar",
+      "party": "D",
+      "state": "MN"
+    },
+    "H000338" : {
+      "first_name": "Orrin",
+      "last_name": "Hatch",
+      "party": "R",
+      "state": "UT"
+    },
+    "F000062" : {
+      "first_name": "Dianne",
+      "last_name": "Feinstein",
+      "party": "D",
+      "state": "CA"
+    },
+    "C001071" : {
+      "first_name": "Bob",
+      "last_name": "Corker",
+      "party": "R",
+      "state": "TN"
+    },
+    "C001070" : {
+      "first_name": "Robert",
+      "last_name": "Casey",
+      "party": "D",
+      "state": "PA"
+    },
+    "C000174" : {
+      "first_name": "Thomas",
+      "last_name": "Carper",
+      "party": "D",
+      "state": "DE"
+    },
+    "C000141" : {
+      "first_name": "Benjamin",
+      "last_name": "Cardin",
+      "party": "D",
+      "state": "MD"
+    },
+    "C000127" : {
+      "first_name": "Maria",
+      "last_name": "Cantwell",
+      "party": "D",
+      "state": "WA"
+    },
+    "B000944" : {
+      "first_name": "Sherrod",
+      "last_name": "Brown",
+      "party": "D",
+      "state": "OH"
+    }
+}

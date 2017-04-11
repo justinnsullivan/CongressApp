@@ -1,0 +1,33 @@
+.state.green{
+	fill:#cdcd73;
+	stroke:transparent;
+	stroke-width:0;
+}
+.state.yellow{
+	fill:#ffe1a3;
+	stroke:transparent;
+	stroke-width:0;
+}
+.state.salmon{
+	fill:#f4947b;
+	stroke:transparent;
+	stroke-width:0;
+}
+.state.orange{
+	fill:#feb781;
+	stroke:transparent;
+	stroke-width:0;
+}
+
+.state{
+	stroke:#233A73;
+	stroke-width: 0.06em;
+}
+
+.state:hover {
+	cursor: pointer;
+}
+
+.senators {
+	color: red;
+}
