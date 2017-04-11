@@ -31,15 +31,16 @@ class App extends Component {
         const { selectedChamber} = this.props;
         return (
             <div className="app">
-                <Picker
-                    value={selectedChamber}
-                    onChange={this.alterChamber}
-                    options={['senate', 'house']}
-                />
-                <UsMap/>
+                <div className="map column small-12 large-12 columns">
+                    <Picker
+                        value={selectedChamber}
+                        onChange={this.alterChamber}
+                        options={['senate', 'house']}
+                    />
+                    <UsMap/>
+                </div>
                 <Legislators/>
                 <Votes/>
-                {!isProduction && <DevTools />}
             </div>
     	);
   	}

@@ -31,7 +31,6 @@ class Votes extends Component {
     };
 
     getVoteTally = (rollCall) => {
-        console.log(rollCall);
         this.props.dispatch(selectRollCall(parseInt(rollCall)));
     }
 

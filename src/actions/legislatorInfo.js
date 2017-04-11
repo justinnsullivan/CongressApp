@@ -25,7 +25,6 @@ export const recieveLegislatorInfo = (id, basic, bills) => ({
 
 const fetchLegislatorBills = (id, basic) => (dispatch) => {
     dispatch(requestLegislatorInfo(id));
-    console.log(basic);
     return fetch(`https://congress.api.sunlightfoundation.com/bills?sponsor_id__in=${id}`)
         .then(response => response.json())
         .then(json => dispatch(recieveLegislatorInfo(id, basic, json.results)));

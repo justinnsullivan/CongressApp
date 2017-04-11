@@ -1,0 +1,7 @@
+.state{
+	stroke: $white;
+	stroke-width: 0.02em;
+	&:hover{
+		cursor: pointer;
+	}
+}

@@ -1,33 +1,29 @@
-.state.green{
-	fill:#cdcd73;
-	stroke:transparent;
-	stroke-width:0;
-}
-.state.yellow{
-	fill:#ffe1a3;
-	stroke:transparent;
-	stroke-width:0;
-}
-.state.salmon{
-	fill:#f4947b;
-	stroke:transparent;
-	stroke-width:0;
-}
-.state.orange{
-	fill:#feb781;
-	stroke:transparent;
-	stroke-width:0;
-}
+@import '../../bower_components/foundation-sites/scss/foundation';
+@include foundation-everything(true);
+@include foundation-everything;
 
-.state{
-	stroke:#233A73;
-	stroke-width: 0.06em;
-}
+// ==========================================================================
+// Utilities
+// ==========================================================================
+@import "utilities/index";
 
-.state:hover {
-	cursor: pointer;
-}
+// ==========================================================================
+// Base Styles
+// ==========================================================================
+@import "base/index";
 
-.senators {
-	color: red;
-}
+// ==========================================================================
+// Layout Styles
+// ==========================================================================
+@import "layout/index";
+
+// ==========================================================================
+// Modules
+// ==========================================================================
+@import "modules/index";
+
+// ==========================================================================
+// States
+// ==========================================================================
+@import "states/index";
+
