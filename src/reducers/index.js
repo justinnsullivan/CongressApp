@@ -5,12 +5,19 @@ import {
     legislatorsByDistrict,
 } from './legislatorsReducer';
 import {
+    currentApp,
+    votesPosition,
+    billsPosition,
+    legislatorsPosition,
+    congressMapToggle
+}from './appControlsReducer'
+import {
     selectedLegislatorId,
     legislatorInfoById,
 } from './legislatorInfoReducer';
 import {
-    votesByDayNum,
-    selectedDayNum,
+    votesByChamber,
+    selectedDate,
 } from './votesReducer';
 import {
     billsByStatus,
@@ -26,12 +33,17 @@ import {
 } from './voteTallyReducer';
 
 const rootReducer = combineReducers({
+    currentApp,
+    votesPosition,
+    billsPosition,
+    legislatorsPosition,
+    congressMapToggle,
     tallyByRollCall,
     selectedRollCall,
     legislatorsByDistrict,
     selectedDistrict,
-    votesByDayNum,
-    selectedDayNum,
+    votesByChamber,
+    selectedDate,
     selectedChamber,
     selectedLegislatorId,
     legislatorInfoById,

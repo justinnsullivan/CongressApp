@@ -1,0 +1,79 @@
+.legislators {
+	height: $app-height;
+	width: 100%;
+	@extend %flexbox;
+    @include flex-direction(row);
+    @include align-items(center);
+	@include layout($standard-layout);
+	background-image: url('../../public/congress.png');
+	background-position: center;
+	background-size: cover;
+	@include e(current-brief) {
+		@extend %current-brief;
+		border: 2em solid $color--primary;
+		color: $color--primary;
+		background-color: rgba(lighten(palette(grey, xx-light),10%),0.9);
+	}
+	@include e(arrow){
+		@include m(left){
+			@extend .votes__arrow--left;
+		}
+		@include m(right){
+			@extend .votes__arrow--right;
+		}	
+	}
+	@include e(photo) {
+		height: 60%;
+		margin-bottom: 4%;
+	}
+	@include e(states){
+		position:absolute;
+		bottom: 0;
+		@include flex-direction(row);
+    	@include align-items(center);
+    	height: 3em;
+    	@include e(link) {
+    		background-color: $color--secondary--b;
+    		font-family: $font-family--light;
+    		font-size: 1.5em;
+    		width: calc(100vh / 50);
+    		height: 100%;
+    		text-decoration: none;
+    		color: white;
+    		border-left: 0.03em solid white;
+    		border-right: 0.03em solid white;
+    	}
+	}
+	@include e(toggle) {
+		@include push(4.5);
+		@include span(3 of 12);
+		@extend %flexbox;
+    	@include flex-direction(row);
+    	@include align-content(center);
+    	@include justify-content(center);
+    	@include transition(background-color 0.4s 0.2s)
+    	background: $color--primary;
+    	position: absolute;
+    	bottom: 2em;
+    	font-size: 1.5em;
+    	text-decoration: none;
+    	text-align: center;
+    	color: white;
+    	padding: 0.75em 0;
+    	border-radius: 0.3em;
+    	&:hover {
+    		background-color: lighten($color--primary, 10%);
+    		cursor: pointer;
+    	}
+	}
+}
+
+[class^="legislators__arrow--"] {
+	height: 100%;
+	@extend %flexbox;
+   	@include flex-direction(column);
+   	@include align-items(center);
+   	@include justify-content(center);
+   	font-size: 7em;
+	color: $color--primary;
+}

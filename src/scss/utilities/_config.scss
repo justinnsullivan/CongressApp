@@ -23,6 +23,9 @@ $font-url--light		 : "https://s3.amazonaws.com/kidkaching/fonts/Gotham-Light.otf
 	src: url($font-url--light) format("opentype");
 }
 
+$standard-layout: layout(auto 12 .25 inside fluid isolate);
+
+
 $font-family--primary    : 	Gotham;
 $font-family--bold		 :  GothamBold;
 $font-family--light      :  GothamLight;
@@ -30,6 +33,9 @@ $font-family--light      :  GothamLight;
 
 $font-weight--light      : 400;
 $font-weight--bold       : 700;
+
+$nav-height		: 13vh;
+$app-height		: 87vh;
 
 
 
@@ -68,7 +74,7 @@ $panel-dark          : rgba(0, 0, 0, 0.3);
 // Color Palette Modifiers
 
 $gradient-one   : linear-gradient(180deg, $yankee, $russet);
-$gradient-two   : linear-gradient(180deg, $cerulean, $redwood);
+$gradient-two   : linear-gradient(90deg, $cerulean, $redwood);
 $gradient-three : linear-gradient(180deg, $sky, #E2C9E3 90%);
 
 $color-palettes: (
@@ -143,3 +149,4 @@ $g-cont-max-w   : 1050px;
 $brkpoint-sm    : 1px;
 $brkpoint-md    : 740px;
 $brkpoint-lg    : 1100px;
+

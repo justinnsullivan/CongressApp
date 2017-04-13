@@ -1,0 +1,146 @@
+[class^="bill-info__link--"] {
+    background-color: $color--secondary;
+    padding: 1em 0;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 0.2em;
+    font-family: $font-family--light;
+    color: white;
+    text-decoration: none;
+    font-size: 2em;
+    &:hover {
+    	cursor: pointer;
+    }
+}
+
+.bill-info {
+    @extend %more-info;
+    background-color: $color--primary;
+    @include e(details) {
+        @include span(full);
+        @extend %flexbox;
+        @include flex-direction(row);
+        @include align-items(space-around);
+        margin-bottom: 6em;
+    }
+    @include e(title) {
+        @include push(0.5);
+        @include span(3 of 12);
+    }
+    @include e(word) {
+        @include push(1);
+        @include span(3 of 12);
+    }
+    @include e(words) {
+        @include push(2%);
+        @include span(4 of 12);
+    }
+    @include e(small) {
+        @include span(2 of 12);
+        @extend %flexbox;
+        @include flex-direction(column);
+        @include align-content(center);
+        @include justify-content(center);
+    }
+    @include e(summary) {
+        @include push(2.5);
+        @include span(7 of 12);
+        @extend %flexbox;
+        @include flex-direction(column);
+        @include align-items(center);
+        @include justify-content(center);
+        background-color: white;
+        border-radius: 0.3em;
+        padding: 4.5em 3em;
+        margin-bottom: 4em;
+        & .title--sub1--bill-info {
+            text-align: center;
+            color: $color--primary;
+        }
+        & .title--sub2--bill-info {
+            margin-top: 0;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            color: $color--primary;
+            font-family: $font-family--primary;
+            font-size: 1.6em;
+        }
+    }
+    @include e(actions) {
+        @include push(1);
+        @include span(5);
+        padding: 4.5em 3em;
+        margin-bottom: 2em;
+        @include e(list) {
+            margin-top: 1.5em;
+            overflow-y: scroll;
+            max-height: 40vh;
+        }
+        & .title--sub2--bill-info {
+            margin-top: 0;
+            color: white;
+            padding-left: 39%;
+            text-align: left;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: $color--primary;
+            font-family: $font-family--primary;
+            font-size: 1.6em;
+        }
+    }
+    @include e(subjects) {
+        @include span(5);
+        padding: 4.5em 3em;
+        @include e(list) {
+            margin-top: 1.5em;
+            overflow-y: scroll;
+            max-height: 40vh;
+        }
+        & .title--sub2--bill-info {
+            margin-top: 0;
+            color: white;
+            padding-left: 39%;
+            text-align: left;
+            text-decoration: none;
+            text-transform: uppercase;
+            background: $color--primary;
+            font-family: $font-family--primary;
+            font-size: 1.6em;
+        }
+        text-align: center;
+    }
+    @include e(action) {
+        font-family: $font-family--light;
+        text-align: center;
+        font-size: 1em;
+        font-size: 1.2em;
+        color: white;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+    @include e(subject) {
+        font-family: $font-family--light;
+        font-size: 1.2em;
+        line-height: 1em;
+        color: white;
+    }
+    @include e(links){
+    	@include push(3)
+    	@include span(6 of 12);
+    	@extend %flexbox;
+	    @include flex-direction(row);
+	    @include align-items(center);
+	    @include justify-content(space-around);
+	    @include layout($standard-layout);
+    }
+    @include e(link) {
+        @include m(two) {
+    		@include span(5 of 12);
+        }
+        @include m(three) {
+            @include span(3 of 12);
+        }
+    }
+}
+

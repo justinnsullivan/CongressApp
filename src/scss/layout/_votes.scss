@@ -1,0 +1,51 @@
+.votes {
+	height: $app-height;
+	width: 100%;
+	@extend %flexbox;
+    @include flex-direction(row);
+    @include align-items(center);
+	@include layout($standard-layout);
+	background-image: url('../../public/senate.png');
+	background-position: center;
+
+	@include e(current-brief){
+		@extend %current-brief;
+		border: 2em solid lighten(palette(grey, xx-light),10%);
+		color: lighten(palette(grey, xx-light),10%);
+		background-color: rgba($color--primary,0.9);
+	}
+	@include e(arrow){
+		
+    @include align-items(center);
+		@include m(left){
+			@include span(2 of 12);
+			& i {
+				@extend .fa;
+				@extend .fa-angle-left;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+		@include m(right){
+			@include span(2 of 12);
+			& i {
+				@extend .fa;
+				@extend .fa-angle-right; 
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+}
+
+[class^="votes__arrow--"] {
+	height: 100%;
+	@extend %flexbox;
+   	@include flex-direction(column);
+   	@include align-items(center);
+   	@include justify-content(center);
+   	font-size: 7em;
+	color: rgba(lighten(palette(grey, xx-light),10%),0.75);
+}

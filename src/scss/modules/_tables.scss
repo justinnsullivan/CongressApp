@@ -1,0 +1,192 @@
+%table {
+    & tr,
+    & thead {
+        @include span(12 of 12);
+        width: 100%;
+    }
+    & thead {
+        text-align: left;
+        font-family: $font-family--primary;
+        border-bottom: 0.1em solid white;
+        font-size: 1.5em;
+        & tr {
+            border-bottom: none;
+        }
+    }
+    & th:hover {
+        cursor: pointer;
+    }
+    & td:nth-child(1),
+    & th:nth-child(1) {
+        @include span(6 of 12);
+    }
+    & td:nth-child(2),
+    & th:nth-child(2) {
+        @include span(2 of 12);
+    }
+    & td:nth-child(3),
+    & th:nth-child(3) {
+        @include span(2 of 12);
+    }
+    & td:nth-child(4),
+    & th:nth-child(4) {
+        @include span(2 of 12);
+    }
+    & tbody {
+        font-family: $font-family--light;
+        height: 500px;
+        width: 100%;
+        font-size: 1em;
+        display: block;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+}
+
+%bill-table {
+    @include push(1.5);
+    @include span(9 of 12);
+    height: 60%;
+    @extend %table;
+    & table {
+        border-collapse: collapse;
+        width: 100%;
+        color: lighten($color--primary, 10%);
+    }
+    & tr:nth-child(1) {
+        padding-top: 1em;
+    }
+    & thead {
+        text-align: left;
+        font-family: $font-family--primary;
+        border-bottom: 0.1em solid lighten($color--primary, 10%);
+        ;
+        font-size: 1.2em;
+        padding-bottom: 0.4em;
+        & tr {
+            border-bottom: none;
+        }
+    }
+    & td:nth-child(1),
+    & th:nth-child(1) {
+        @include span(1 of 12);
+    }
+    & td:nth-child(2),
+    & th:nth-child(2) {
+        @include span(7.5 of 12);
+    }
+    & td:nth-child(3),
+    & th:nth-child(3) {
+        @include span(1 of 12);
+    }
+    & td:nth-child(4),
+    & th:nth-child(4) {
+        @include span(1.5 of 12);
+    }
+    & td:nth-child(5),
+    & th:nth-child(5) {
+        @include span(1 of 12);
+    }
+    th:nth-child(1) {
+        padding-left: 0;
+    }
+    & tr {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: 0.04em solid lighten($color--primary, 10%);
+    }
+}
+
+.table {
+    @include m(tally) {
+        @extend %table;
+        @include push(1.5);
+        @include span(9 of 12);
+        margin-bottom: 4em;
+        height: 70%;
+        & table {
+            border-collapse: collapse;
+            width: 100%;
+            color: white;
+        }
+        & tr {
+            height: 3em;
+            padding-top: 1em;
+            border-bottom: 0.04em solid white;
+        }
+    }
+    @include m(bills) {
+        @include m(D) {
+        	@extend %bill-table;
+            & table {
+                border-collapse: collapse;
+                width: 100%;
+                color: lighten($color--primary, 10%);
+            }
+            & thead {
+                text-align: left;
+                font-family: $font-family--primary;
+                border-bottom: 0.1em solid lighten($color--primary, 10%);
+                ;
+                font-size: 1.2em;
+                padding-bottom: 0.4em;
+                & tr {
+                    border-bottom: none;
+                }
+            }
+            & tr {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                border-bottom: 0.04em solid lighten($color--primary, 10%);
+            }
+        }
+        @include m(R) {
+        	@extend %bill-table;
+            & table {
+                border-collapse: collapse;
+                width: 100%;
+                color: darken($color--secondary, 10%);
+            }
+            & thead {
+                text-align: left;
+                font-family: $font-family--primary;
+                border-bottom: 0.1em solid darken($color--secondary, 10%);
+                ;
+                font-size: 1.2em;
+                padding-bottom: 0.4em;
+                & tr {
+                    border-bottom: none;
+                }
+            }
+            & tr {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                border-bottom: 0.04em solid darken($color--secondary, 10%);
+            }
+        }
+        @include m(ID) {
+        	@extend %bill-table;
+            & table {
+                border-collapse: collapse;
+                width: 100%;
+                color: $grey;
+            }
+            & thead {
+                text-align: left;
+                font-family: $font-family--primary;
+                border-bottom: 0.1em solid $grey;
+                ;
+                font-size: 1.2em;
+                padding-bottom: 0.4em;
+                & tr {
+                    border-bottom: none;
+                }
+            }
+            & tr {
+                padding-top: 1em;
+                padding-bottom: 1em;
+                border-bottom: 0.04em solid $grey;
+            }
+        }
+    }
+}

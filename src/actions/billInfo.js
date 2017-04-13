@@ -13,12 +13,27 @@ export const requestBillInfo = (billId) => ({
     billId
 });
 
-export const receiveBillInfo = (billId, json) => ({
+export const receiveBillInfo = (billId, bill, json) => {
+    bill = bill.results[0];
+    bill['subjects'] = json.results[0].subjects;
+    return {
         type: RECEIVE_BILL_INFO,
         billId,
-        billInfo: json.results,
+        billInfo: bill,
         receivedAt: Date.now(),
-});
+    }
+};
+
+const fetchBillSubjects = (billId, bill) => (dispatch) => {
+    var req = new Request(`https://api.propublica.org/congress/v1/114/bills/${billId}/subjects.json`,{
+        headers: {
+            "X-API-Key": "EmdgdLnrtE2JS1cKFCYdD3Xq9Vl9pmuH5HuWkf0k",
+        }
+    });
+    return fetch(req)
+        .then(response => response.json())
+        .then(json => dispatch(receiveBillInfo(billId, bill, json)));
+}
 
 const fetchBillInfo = (billId) => (dispatch) => {
     dispatch(requestBillInfo(billId));
@@ -29,15 +44,18 @@ const fetchBillInfo = (billId) => (dispatch) => {
     });
     return fetch(req)
         .then(response => response.json())
-        .then(json => dispatch(receiveBillInfo(billId, json)));
+        .then(json => dispatch(fetchBillSubjects(billId, json)));
 };
 
 const shoudFetchBillInfo = (state, billId) => {
-    const bills = state.billInfo;
+    const bills = state.billInfoById[billId];
     if (!bills) {
         return true;
     }
-    if (bills.isFetching) {
+    if (bills.isFetchingBillInfo) {
+        return false;
+    }
+    else {
         return false;
     }
 };

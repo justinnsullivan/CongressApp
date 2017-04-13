@@ -1,0 +1,126 @@
+[class^="tally__totals--"] {
+	width: 30%;
+	height: 2em;
+	text-align: center;
+	margin: 0;
+	font-size: 1.5em;
+	@extend %flexbox;
+	@include flex-direction(column);
+    @include align-items(center);
+    @include justify-content(center);
+}
+
+[class^="tally__breakdown--"] {
+	width: 27%;
+	padding: 1em;
+	height: 100%;
+	& div{
+		@extend %flexbox;
+    	@include flex-direction(row);
+    	@include justify-content(center);
+    	@include align-items(center);
+	}
+	& h4 {
+		display: inline;
+		font-size: 1.2em;
+		font-family: $font-family--primary;
+		margin-top: 0;
+		margin-bottom: 0.3em;
+	}
+	
+}
+
+.tally {
+	@extend %more-info;
+	padding-bottom: 0;
+	background-color: $color--secondary;
+	@include e(totals) {
+		@extend %flexbox;
+    	@include flex-direction(row);
+    	@include justify-content(center);
+		@include push(2);
+		@include span(8 of 12);
+		color: white;
+		font-family: $font-family--light;
+		margin-bottom: 3em;
+		@include m(yes) {
+			background: $color--primary--b;
+		}
+		@include m(no) {
+			background: $color--secondary--b;
+		}
+		@include m(none) {
+			background: palette(grey, x-light);
+		}
+	}
+	@include e(details) {
+		@include span(full);
+		@extend %flexbox;
+		@include flex-direction(row);
+    	@include align-items(center);
+    	margin-bottom: 4em;
+	}
+	@include e(title) {
+		@include push(1);
+		@include span(3 of 12);
+	}
+	@include e(words) {
+		@include push(2%);
+		@include span(4 of 12);
+	}
+	@include e(small) {
+		@include span(2 of 12);
+		@extend %flexbox;
+    	@include flex-direction(column);
+    	@include align-content(center);
+    	@include justify-content(center);
+	}
+	@include e(breakdown){
+		@include push(1);
+		@include span(10 of 12);
+		height:100%;
+		margin-bottom: 3em;
+		@extend %flexbox;
+		@include flex-direction(row);
+    	@include align-items(center);
+    	@include justify-content(center);
+		@include m(dem){
+			font-family: $font-family--primary;
+			text-align: center;
+			font-size: 1.1em;
+			color: $color--primary;
+		}
+		@include m(rep){
+			font-family: $font-family--primary;
+			color: darken($color--secondary,10%);
+			text-align: center;
+			font-size: 1.1em;
+			color: darken($color--secondary,30%);
+		}
+		@include m(ind){
+			font-family: $font-family--primary;
+			text-align: center;
+			font-size: 1.1em;
+			color: palette(grey,x-light);
+		}
+		@include e(wrap){
+			width: 100%;
+			margin: 0 1em;
+			height: 100%;
+			& p {
+				font-family: $font-family--light;
+				font-size: 5em;
+				line-height: 1em;
+				margin-bottom: 0;
+			}
+			& span {
+				width: 100%;
+				font-family: $font-family--primary;
+				text-align: center;
+				font-size: 1.1em;
+			}
+		}
+	}
+}
+
+

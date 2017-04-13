@@ -35,11 +35,11 @@ const fetchBills = (billStatus, chamber) => (dispatch) => {
 };
 
 const shouldFetchRecentBills = (state, billStatus) => {
-    const bills = state.recentBills;
+    const bills = state.billsByStatus[billStatus];
     if (!bills) {
         return true;
     }
-    if (bills.isFetching) {
+    if (bills.isFetchingBills) {
         return false;
     }
     return bills.didInvalidate;

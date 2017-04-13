@@ -8,13 +8,17 @@ import { Provider } from 'react-redux';
 import store from './store';
 import router from './router';
 import history from './history';
+import Header from './components/Tools/Header';
 
 let routes = require('./routes.json').default;
 
 const container = document.getElementById('container');
 
 function renderComponent(component) {
-    ReactDOM.render(<Provider store={store}>{component}</Provider>, container);
+    ReactDOM.render(
+    	<Provider store={store}>
+    		{component}
+    	</Provider>, container);
 }
 
 function render(location) {

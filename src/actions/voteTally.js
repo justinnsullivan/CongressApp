@@ -35,19 +35,24 @@ const fetchTally = (rollCall, chamber) => (dispatch) => {
 };
 
 const shoudFetchVoteTally = (state, rollCall, chamber) => {
-    const votes = state.recentVotes;
+    const votes = state.tallyByRollCall[rollCall];
     if (!votes) {
         return true;
     }
-    if (votes.isFetching) {
+    if (votes.isFetchingTally) {
         return false;
     }
-    return votes.didInvalidate;
+    else {
+        return false;
+    };
 };
 
 
 export const fetchVoteTallyIfNeeded = (rollCall,chamber) => (dispatch, getState) => {
     if (shoudFetchVoteTally(getState(), rollCall, chamber) && rollCall !== 0) {
         return dispatch(fetchTally(rollCall, chamber));
+    }
+    else {
+        return ((getState()).tallyByRollCall[rollCall])
     }
 };

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { selectLegislatordId, fetchLegislatorInfoIfNeeded } from '../../actions/legislatorInfo';
-
+import LegislatorInfo from './LegislatorInfo'
 
 class Legislator extends Component {
     static propTypes = {
@@ -27,16 +27,17 @@ class Legislator extends Component {
 
     render() {
         const { selectedLegislatorId, legislatorInfo, isFetchingInfo } = this.props;
-        var placeholder = <h4>Loading...</h4>
+        var placeholder = <div className='legislator-info'><i className="loader--tally"></i></div>;
         if (selectedLegislatorId === '') {
-            placeholder = <h4>Select a legislator</h4>
+            placeholder = ''
         }
         return (
             <div>
-                {isFetchingInfo ? placeholder:
-                    `${legislatorInfo.basic[0].first_name} ${legislatorInfo.basic[0].last_name} ${legislatorInfo.basic[0].leadership_role}`
+                {isFetchingInfo ? placeholder :
+                    <div className='legislator-info'>
+                        <LegislatorInfo legislatorInfo={legislatorInfo}/>
+                    </div>
                 }
-                
             </div>
         );
     }
@@ -46,7 +47,6 @@ class Legislator extends Component {
 
 const mapStateToProps = (state) => {
     const { selectedChamber, selectedLegislatorId, legislatorInfoById } = state;
-
     const {
         isFetchingInfo,
         info: legislatorInfo,

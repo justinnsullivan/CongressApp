@@ -1,0 +1,33 @@
+%icon {
+    font-size: 2em;
+    @extend .fa;
+}
+
+.loader {
+    @include m(tally) {
+        margin-left: calc(50% - 0.5em);
+        color: lighten(palette(grey, xx-light), 10%);
+    }
+    @include m(bills) {
+        font-size: 4em;
+        color: lighten(palette(grey, xx-light), 10%);
+    }
+}
+
+[class^="loader--"] {
+    @extend .fa;
+    @extend .fa-refresh;
+    @extend .fa-spin;
+    @extend .fa-4x;
+    @extend .fa-fw;
+}
+
+%more-info {
+    height: 100%;
+    width: 100%;
+    padding: 4em 0;
+    @extend %flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include layout($standard-layout);
+}

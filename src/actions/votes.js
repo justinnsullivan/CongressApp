@@ -3,55 +3,56 @@ export const REQUEST_RECENT_VOTES = 'REQUEST_RECENT_VOTES';
 export const RECEIVE_RECENT_VOTES = 'RECEIVE_RECENT_VOTES';
 
 
-export const selectNumDays = numDays => ({
+export const selectDate = date => ({
     type: SELECT_VOTE_DATE,
-    numDays,
+    date,
 });
 
-export const requestRecentVotes = (numDays,chamber) => ({
+export const requestRecentVotes = (date, prevVotes, chamber) => ({
     type: REQUEST_RECENT_VOTES,
-    numDays,
+    date,
+    prevVotes,
     chamber
 });
 
-export const receiveRecentVotes = (numDays, chamber, json) => ({
-    type: RECEIVE_RECENT_VOTES,
-    numDays,
+export const receiveRecentVotes = (date, prevVotes, chamber, json) => {
+    return {type: RECEIVE_RECENT_VOTES,
+    date,
     chamber,
-    recVotes: json.results,
-    receivedAt: Date.now(),
-});
+    recVotes: prevVotes.concat(json.results['votes']),
+    receivedAt: Date.now()};  
+};
 
 
-const fetchVotes = (numDays, chamber) => (dispatch) => {
-    var today = (new Date()).toISOString().split('T')[0];
-    var before = new Date();
-    before.setDate(before.getDate()-numDays)
-    before = before.toISOString().split('T')[0]
-    var req = new Request(`https://api.propublica.org/congress/v1/${chamber}/votes/${before}/${today}`,{
+const fetchVotes = (date, prevVotes, chamber) => (dispatch) => {
+    let before = date;
+    let date2 = date.toISOString().split('T')[0];
+    before.setDate(before.getDate()-30);
+    before = before.toISOString().split('T')[0];
+    let req = new Request(`https://api.propublica.org/congress/v1/${chamber}/votes/${before}/${date2}`,{
         headers: {
             "X-API-Key": "EmdgdLnrtE2JS1cKFCYdD3Xq9Vl9pmuH5HuWkf0k",
         }
     });
     return fetch(req)
         .then(response => response.json())
-        .then(json => dispatch(receiveRecentVotes(numDays, chamber, json)));
+        .then(json => dispatch(receiveRecentVotes(date, prevVotes, chamber, json)));
 };
 
-const shouldFetchRecentVotes = (state, numDays) => {
+const shouldFetchRecentVotes = (state, date) => {
     const votes = state.recentVotes;
     if (!votes) {
         return true;
     }
-    if (votes.isFetching) {
+    if (votes.isFetchingVotes) {
         return false;
     }
     return votes.didInvalidate;
 };
 
 
-export const fetchRecentVotesIfNeeded = (numDays, chamber, force = false) => (dispatch, getState) => {
-    if (force === true || shouldFetchRecentVotes(getState(), numDays)) {
-        return dispatch(fetchVotes(numDays, chamber));
+export const fetchRecentVotesIfNeeded = (date, prevVotes, chamber, force = false) => (dispatch, getState) => {
+    if (force === true || shouldFetchRecentVotes(getState(), date)) {
+        return dispatch(fetchVotes(date, prevVotes, chamber));
     }
 };

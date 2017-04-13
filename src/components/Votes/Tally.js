@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { fetchRecentVotesIfNeeded, selectNumDays } from '../../actions/votes';
 import { fetchVoteTallyIfNeeded, selectRollCall } from '../../actions/voteTally';
 import TallyTable from './TallyTable';
+import TallyDetails from './TallyDetails';
+import TallyNumbers from './TallyNumbers';
+import UsTallyMap from '../tools/UsTallyMap';
 
 class Tally extends Component {
     static propTypes = {
@@ -15,7 +17,7 @@ class Tally extends Component {
     };
 
     componentDidMount() {
-        const {selectedRollCall, dispatch, selectedChamber} = this.props;
+        let {selectedRollCall, dispatch, selectedChamber} = this.props;
         dispatch(fetchVoteTallyIfNeeded(selectedRollCall, selectedChamber));
     }
 
@@ -30,14 +32,26 @@ class Tally extends Component {
 
     render() {
         const { voteTally, isFetchingTally, selectedRollCall } = this.props;
-        var placeholder = <h4>Loading Tally...</h4>
+        var placeholder = <div className="tally"><i className="loader--tally"></i></div>
         if (selectedRollCall === 0) {
-            placeholder = <h4></h4>
+            placeholder = '';
         }
         return (
   		    <div>
                 {isFetchingTally ? placeholder :
-                    <TallyTable tally={voteTally} />
+                    <div className="tally">
+                        <TallyDetails vote={voteTally.votes.vote}/>
+                        <TallyNumbers vote={voteTally.votes.vote}/>
+                        <TallyTable tally={voteTally} />
+                        <div className="us-map--tally">
+                            <UsTallyMap/>
+                            <div className="us-map__key">
+                                <span className="us-map__key__yes">Yes</span>
+                                <div className="us-map__key__gradient"></div>
+                                <span className="us-map__key__no">No</span>
+                            </div>
+                        </div>
+                    </div>
                 }
   		    </div>
 	    );

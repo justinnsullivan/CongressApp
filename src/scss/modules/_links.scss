@@ -1,0 +1,42 @@
+.link {
+    @include m(tally) {
+        @include span(5 of 12);
+        @extend %flexbox;
+        @include flex-direction(row);
+        @include align-content(center);
+        @include justify-content(center);
+        background: white;
+        text-decoration: none;
+        text-align: center;
+        color: $color--secondary--b;
+        padding: 0.5em 0;
+        margin-top: 2em;
+        border-radius: 0.1em;
+    }
+    @include m(social) {
+        @include m(D) {
+             background-color: lighten($color--primary,20%);
+        }
+        @include m(R) {
+             background-color: darken($color--secondary,20%);
+        }
+        @include m(I) {
+             background-color: $grey;
+        }
+    }
+}
+
+[class^="link--social--"] {
+    @include span(2.5 of 12);
+    font-size: 2em;
+    color: white;
+    text-decoration:none;
+    @extend %flexbox;
+    @include flex-direction(row);
+    @include align-content(center);
+    @include justify-content(center);
+    text-decration: none;
+    text-align: center;
+    padding: 1em 0;
+    border-radius: 0.1em;
+}

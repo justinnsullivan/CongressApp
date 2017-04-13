@@ -1,0 +1,17 @@
+.bills {
+	height: $app-height;
+	width: 100%;
+	@extend %flexbox;
+    @include flex-direction(row);
+    @include align-items(center);
+	@include layout($standard-layout);
+	background-image: url('../../public/bill.png');
+	background-position: center;
+	background-size: 102%;
+	@include e(current-brief) {
+		@extend %current-brief;
+		border: 2em solid lighten(palette(grey, xx-light),10%);
+		color: lighten(palette(grey, xx-light),10%);
+		background-color: rgba($color--secondary,0.9);
+	}
+}

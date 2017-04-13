@@ -1,5 +1,49 @@
-.map {
-	height:100vh;
-	padding: 0;
-	background-color: $color--primary--b;
+.us-map {
+	@include m(tally){
+		height:100%;
+		padding: 4em;
+		background-color: $color--primary--b;
+	}
+	@include m(congress) {
+		height: 100%;
+		background-color: palette(grey, xx-light);
+		& svg {
+			margin: 3em 0;
+		}
+		& .state {
+			fill: $color--secondary--b;
+			stroke: lighten(palette(grey, xx-light),10%);
+		}
+	}
+	@include e(key){
+		bottom: 5%;
+		margin-top: 2em;
+		margin-left:auto;
+		margin-right:auto;
+		background: white;
+		@extend %flexbox;
+        @include flex-direction(row);
+        @include align-items(center);
+        @include justify-content(space-between);
+        @include push(4);
+        @include span(4 of 12);
+        height: 10vh;
+        border-radius: 0.2em;
+        @include e(gradient){
+        	display: block;
+        	background: $gradient-two;
+        	height: 6vh;
+        	width: 70%;
+        }
+        @include e(yes){
+        	font-size: 2em;
+        	font-family: $font-family--primary;
+        	color: $color--primary--b;
+        }
+        @include e(no){
+        	font-size: 2em;
+        	font-family: $font-family--primary;
+        	color: $color--secondary--b;
+        }
+	}
 }

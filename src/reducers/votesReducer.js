@@ -5,18 +5,18 @@ import {
 } from '../actions/votes';
 
 
-export const selectedDayNum = (state = 20, action) => {
+export const selectedDate = (date = new Date(), action) => {
     switch (action.type) {
         case SELECT_VOTE_DATE:
-            return action.numDays;
+            return action.date;
         default:
-            return state;
+            return date;
     }
 };
 
 export const recVotes = (state = {
     isFetchingVotes: false,
-    vts: {},
+    vts: [],
 }, action) => {
     switch (action.type) {
         case REQUEST_RECENT_VOTES:
@@ -36,17 +36,13 @@ export const recVotes = (state = {
     }
 };
 
-export const votesByDayNum = (state = {}, action) => {
+export const votesByChamber = (state = {}, action) => {
     switch (action.type) {
         case RECEIVE_RECENT_VOTES:
         case REQUEST_RECENT_VOTES:
-            var num = action.numDays;
-            if (action.chamber === 'house') {
-                num += 100;
-            }
             return {
                 ...state,
-                [num]: recVotes(state[num], action),
+                [action.chamber]: recVotes(state[action.chamber], action),
             };
         default:
             return state;

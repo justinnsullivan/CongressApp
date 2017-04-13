@@ -1,0 +1,66 @@
+.legislator-info {
+    @extend %more-info;
+    background-color: white;
+    @include e(details) {
+        @include span(full);
+        @extend %flexbox;
+        @include flex-direction(row);
+        @include align-items(space-around);
+        margin-bottom: 2em;
+    }
+    @include e(title) {
+        @include push(2);
+        @include span(3 of 12);
+    }
+    @include e(word) {
+        @include push(1);
+        @include span(3 of 12);
+    }
+    @include e(words) {
+        @include span(3 of 12);
+    }
+    @include e(small) {
+        @include span(2 of 12);
+    }
+    @include e(table) {
+        @include span(full);
+        @extend %flexbox;
+        @include flex-direction(column);
+        & p {
+            text-align: center;
+            font-size: 3em;
+        }
+        margin-bottom: 4em;
+    }
+    @include e(committees) {
+        @include m(D) {
+            color: lighten($color--primary,20%);
+        }
+        @include m(R) {
+            color: darken($color--secondary,20%);
+        }
+        @include m(I) {
+            color: $grey;
+        }
+    }
+    @include e(links) {
+        @include push(1.5);
+        @include span(9 of 12);
+        @extend %flexbox;
+        @include flex-direction(row);
+        @include align-items(center);
+        @include justify-content(space-around);
+    }
+}
+
+[class^="legislator-info__committees--"] {
+    @include push(2.5);
+    @include span(7 of 12);
+    text-align: center;
+    margin-top: 2em;
+    & span {
+        display: inline;
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+}

@@ -2,7 +2,7 @@ import {
     SELECT_DISTRICT,
     SELECT_CHAMBER,
     REQUEST_LEGISLATORS,
-    RECEIVE_LEGISLATORS,
+    RECEIVE_LEGISLATORS
 } from '../actions/legislators';
 
 export const selectedDistrict = (state = 'NY', action) => {

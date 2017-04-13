@@ -1,0 +1,204 @@
+.title {
+    @include m(vote) {
+        @extend %title-main;
+        color: $color--secondary;
+        margin-bottom: 0.4em;
+    }
+    @include m(tally) {
+        @extend %title-main;
+        font-size: 4em;
+        width: 100%;
+        line-height: 1em;
+        color: white;
+        margin-bottom: 1em;
+    }
+    @include m(legislators) {
+        @include m(D) {
+            @extend %title-main;
+            color: $color--primary--b;
+            margin-bottom: 0.4em;
+        }
+        @include m(R) {
+            @extend %title-main;
+            color: $color--secondary--b;
+            margin-bottom: 0.4em;
+        }
+        @include m(I) {
+            @extend %title-main;
+            color: $grey;
+            margin-bottom: 0.4em;
+        }
+    }
+    @include m(bills) {
+        @extend %title-main;
+        color: $color--primary;
+        margin-top: 1em;
+        margin-bottom: 0.4em;
+    }
+    @include m(bill-info) {
+        @extend .title--tally;
+        margin-top: 1em;
+    }
+    @include m(legislator-info) {
+        @extend .title--tally;
+        color: $grey;
+        margin-top: 0.3em;
+        @include m(D) {
+            @extend .title--tally;
+            color: $color--primary--b;
+            margin-top: 0.3em;
+        }
+        @include m(R) {
+            @extend .title--tally;
+            color: $color--secondary--b;
+            margin-top: 0.3em;
+        }
+        @include m(ID) {
+            @extend .title--tally;
+            color: $grey;
+            margin-top: 0.3em;
+        }
+    }
+    @include m(sub1) {
+        @include m(vote) {
+            @extend %title-sub1;
+            @include span(9 of 12);
+            color: lighten(palette(grey, xx-light), 10%);
+            text-align: center;
+        }
+        @include m(bills) {
+            @extend %title-sub1;
+            @include span(9 of 12);
+            color: lighten(palette(grey, xx-light), 10%);
+            text-align: center;
+        }
+        @include m(legislators) {
+            @include m(D) {
+                @extend %title-sub1;
+                @include span(9 of 12);
+                font-size: 2em;
+                margin-bottom: 0.1em;
+                color: $color--primary--b;
+            }
+            @include m(R) {
+                @extend %title-sub1;
+                @include span(9 of 12);
+                font-size: 2em;
+                margin-bottom: 0.1em;
+                color: $color--secondary--b;
+            }
+            @include m(I) {
+                @extend %title-sub1;
+                @include span(9 of 12);
+                font-size: 2em;
+                margin-bottom: 0.1em;
+                color: $grey;
+            }
+        }
+        @include m(tally) {
+            @extend %title-sub1;
+            margin-bottom: 0;
+            color: white;
+            text-align: left;
+        }
+        @include m(bill-info) {
+            @extend .title--sub1--tally;
+        }
+        @include m(legislator-info) {
+            color: $grey;
+            @extend .title--sub1--tally;
+            @include m(D) {
+                @extend .title--sub1--tally;
+                color: $color--primary--b;
+            }
+            @include m(R) {
+                @extend .title--sub1--tally;
+                color: $color--secondary--b;
+            }
+            @include m(ID) {
+                @extend .title--sub1--tally;
+                color: $grey;
+            }
+        }
+    }
+    @include m(sub2) {
+        @include m(vote) {
+            @extend .title--sub1--vote;
+            font-size: 1em;
+            @include span(6 of 12);
+            margin-bottom: 1em;
+            text-align: center;
+        }
+        @include m(bills) {
+            @extend .title--sub1--vote;
+            font-size: 1em;
+            @include span(7 of 12);
+            text-align: center;
+        }
+        @include m(legislators) {
+        	@include m(D) {
+                @extend .title--sub1--legislators--D;
+		        font-size: 1.5em;
+		        @include span(6 of 12);
+		        margin-bottom: 1em;
+		        text-align: center;
+            }
+            @include m(R) {
+                @extend .title--sub1--legislators--R;
+		        font-size: 1.5em;
+		        @include span(6 of 12);
+		        margin-bottom: 1em;
+		        text-align: center;
+            }
+            @include m(I) {
+                @extend .title--sub1--legislators--I;
+                font-size: 1.5em;
+                @include span(6 of 12);
+                margin-bottom: 1em;
+                text-align: center;
+            }
+        }
+        @include m(tally) {
+            font-size: 1em;
+            font-family: $font-family--light;
+            color: white;
+            text-decoration: underline;
+            margin-top: 1em;
+            margin-bottom: 0.4em;
+            text-align: left;
+        }
+        @include m(bill-info) {
+            @extend .title--sub2--tally;
+        }
+        @include m(legislator-info){
+            @extend .title--sub2--tally;
+            @include m(D) {
+                @extend .title--sub2--tally;
+                color: $color--primary--b;
+            }
+            @include m(R) {
+                @extend .title--sub2--tally;
+                color: $color--secondary--b;
+            }
+            @include m(ID) {
+                @extend .title--sub2--tally;
+                color: $grey;
+            }
+        }
+    }
+    @include m(sub3) {
+        @include m(vote) {
+            @extend .title--sub1--vote;
+            font-size: 2.1em;
+            & .yes {
+                color: lighten($color--primary--b, 5%)
+            }
+            & .no {
+                color: $color--secondary;
+            }
+        }
+        @include m(bills) {
+            @extend .title--sub2--vote;
+        }
+    }
+}

@@ -5,7 +5,7 @@ import senateMap from '../../hard.json';
 import repMap from '../../soft.json';
 
 
-class Tally extends Component {
+class TallyTable extends Component {
     static propTypes = {
         tally: PropTypes.object.isRequired
     };
@@ -33,14 +33,13 @@ class Tally extends Component {
     render() {
         const tallyList = this.processTally(this.props.tally.votes.vote.positions);
         return (
-
-            <div>
+            <div  className="table--tally">
                 {(tallyList.length === 0) ? <p>hi!</p> :
-                <Table className="table" data={tallyList} sortable defaultSort={{ column: 'State' }} />
+                <Table data={tallyList} sortable defaultSort={{ column: 'State' }} />
                 }
             </div>
         );
     }
 }
 
-export default Tally;
+export default TallyTable;

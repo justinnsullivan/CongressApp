@@ -43,14 +43,16 @@ const fetchLegislatorInfo = id => (dispatch) => {
 };
 
 const shouldFetchLegislatorInfo = (state, id) => {
-    const legislatorInfo = state.legislatorInfoById;
+    const legislatorInfo = state.legislatorInfoById[id];
     if (!legislatorInfo) {
         return true;
     }
     if (id === '' || legislatorInfo.isFetchingInfo) {
         return false;
     }
-    return true;
+    else {
+        return false;
+    }
 };
 
 

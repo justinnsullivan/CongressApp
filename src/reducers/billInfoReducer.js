@@ -16,7 +16,7 @@ export const selectedBillId = (billId = '', action) => {
 
 export const billInfo = (state = {
     isFetchingBillInfo: false,
-    bil: [],
+    bil: {},
 }, action) => {
     switch (action.type) {
         case REQUEST_BILL_INFO:

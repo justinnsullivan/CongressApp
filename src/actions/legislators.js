@@ -35,7 +35,16 @@ const fetchLegislators = (district, chamber) => (dispatch) => {
         .then(json => dispatch(receiveLegislators(district, chamber, json)));
 };
 
-const shouldFetchLegislators = (state, district, chamber) => true;
+const shouldFetchLegislators = (state, district, chamber) => {
+    const legislators = state.legislatorsByDistrict[district];
+    if (!legislators) {
+        return true;
+    }
+    if (legislators.isFetching) {
+        return false;
+    }
+    return legislators.didInvalidate;
+};
 
 export const fetchLegislatorsIfNeeded = (district, chamber) => (dispatch, getState) => {
     if (shouldFetchLegislators(getState(), district, chamber)) {

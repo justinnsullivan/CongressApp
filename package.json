@@ -81,6 +81,7 @@
     "style-loader": "^0.14.1",
     "stylelint": "^7.9.0",
     "stylelint-config-standard": "^16.0.0",
+    "susy": "^2.2.12",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1",
